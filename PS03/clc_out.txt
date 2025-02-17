@@ -1,0 +1,8 @@
+Usage: ./clc x1 x2 operator
+where x1, x2 are floats and operators are + - x /
+2.500000 + 3.500000 is 6.000000
+2.500000 - 3.500000 is -1.000000
+2.500000 x 3.500000 is 8.750000
+2.500000 / 3.500000 is 0.714286
+Error: Divide by zero
+Error: Unknown operator %

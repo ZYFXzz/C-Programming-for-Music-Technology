@@ -10,7 +10,7 @@ int read_students(FILE *ifp, struct Student *sdata)
 
     /*/
     int i;
-    char line[50]; // looks like the csv file, each line have numbers of characters small than 50
+    char line[LINE_LEN]; // looks like the csv file, each line have numbers of characters small than 50
 
     // traverse through each line of the file
     for (i = 0; i < MAX_STUDENTS; i++)
@@ -30,8 +30,6 @@ int read_students(FILE *ifp, struct Student *sdata)
         strcpy(sdata[i].last, last);
         strcpy(sdata[i].first, first);
         sdata[i].id = atoi(id_str);
-
-        i++;
     }
     return i;
 }
@@ -80,7 +78,7 @@ int comp_id(const void *a, const void *b)
 {
     const struct Student *pa = (const struct Student *)a;
     const struct Student *pb = (const struct Student *)b;
-    return (pa->id > pb->id) - (pa->id < pb->id);
+    return pa->id - pb->id;
 }
 
 void write_students(FILE *ofp, int num_students, struct Student *sdata)
@@ -88,8 +86,8 @@ void write_students(FILE *ofp, int num_students, struct Student *sdata)
     for (int i = 0; i < num_students; i++)
     {
         // write file
-        fprintf(ofp, "%s, %s, %d\n", sdata[i].last, sdata[i].first, sdata[i].id);
+        fprintf(ofp, "%s,%s,%d\n", sdata[i].last, sdata[i].first, sdata[i].id);
         // terminal output
-        printf("%s, %s, %d\n", sdata[i].last, sdata[i].first, sdata[i].id);
+        printf("%s,%s,%d\n", sdata[i].last, sdata[i].first, sdata[i].id);
     }
 }

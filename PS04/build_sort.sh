@@ -1,1 +1,0 @@
-gcc -o sort sort_main.c sort_struct.c

@@ -1,0 +1,11 @@
+1. Linear Search
+Time Complexity: O(N)
+
+1. Binary Search
+Time Complexity: O(n*log(N))
+Pre-sort is needed
+
+1. Linear Search
+Time Complexity: O(1)
+But computing the hash values & table is needed beforehand
+

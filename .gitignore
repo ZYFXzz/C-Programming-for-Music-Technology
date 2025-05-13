@@ -1,0 +1,37 @@
+# Ignore all .exe files in the project and subfolders
+*.exe
+
+# Ignore build artifacts
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+
+# Ignore compiled binaries
+*.out
+*.elf
+
+# Ignore temporary files
+*.tmp
+*.log
+*.swp
+*.bak
+*.swo
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+*.user
+*.sln
+*.vcxproj*
+*.DS_Store
+
+# Ignore Git-specific files
+*.orig
+
+# Ignore files larger than GitHub's maximum file size (100 MB)
+# Note: GitHub will reject files over 100 MB regardless of .gitignore
